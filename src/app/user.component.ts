@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
 })
 
 export class UserComponent {
-  username = 'CosmicTiger';
+  users = ['Luis', 'Reyna', 'Tito'];
+  username = '';
+  visible = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.visible = true;
+    }, 3000);
+  }
+
+  onAddUser() {
+    this.users.push(this.username);
+  }
 }
