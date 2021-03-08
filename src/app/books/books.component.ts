@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 
 
 export class BooksComponent {
-  books = ['Mathematics 1', 'Computational Complexion', 'Book 3'];
+  books = ['Mathematics 1', 'Computational Complexion', 'Basic Algebra'];
+
+  deleteBook(book) {
+    this.books = this.books.filter(p => p !== book);
+  }
 };

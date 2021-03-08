@@ -1,1 +1,5 @@
-<app-book *ngFor="let book of books" [bookTitle]="book"></app-book>
+<app-book
+  (bookClicked)="deleteBook(book)"
+  *ngFor="let book of books"
+  [bookTitle]="book"
+></app-book>
