@@ -12,4 +12,10 @@ export class BooksComponent {
   deleteBook(book) {
     this.books = this.books.filter(p => p !== book);
   }
+
+  saveBook(f) {
+    if (f.valid) {
+      this.books.push(f.value.bookName);
+    }
+  }
 };
