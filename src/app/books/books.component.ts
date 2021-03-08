@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BooksService } from '../services/books.service';
 
 @Component ({
   selector: 'app-books',
@@ -7,15 +8,18 @@ import { Component } from '@angular/core';
 
 
 export class BooksComponent {
-  books = ['Mathematics 1', 'Computational Complexion', 'Basic Algebra'];
+
+  books = [];
+
+  constructor(private booksService: BooksService) {
+    this.books = booksService.getBooks();
+  }
 
   deleteBook(book) {
-    this.books = this.books.filter(p => p !== book);
   }
 
   saveBook(f) {
     if (f.valid) {
-      this.books.push(f.value.bookName);
     }
   }
 };
