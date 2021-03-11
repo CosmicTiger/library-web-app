@@ -7,6 +7,7 @@ import { UserComponent } from './user.component';
 import { FormsModule } from '@angular/forms';
 import { BooksComponent } from './books/books.component';
 import { BookComponent } from './book/book.component';
+import { StartComponent } from './start.component';
 
 import { BooksService } from './services/books.service';
 
@@ -15,7 +16,8 @@ import { BooksService } from './services/books.service';
     AppComponent,
     UserComponent,
     BooksComponent,
-    BookComponent
+    BookComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,
